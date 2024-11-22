@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <section class="py-20 bg-white"> 
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-8">Our Featured Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Event Cards -->
+                <div class="transform hover:scale-105 transition-transform duration-300 p-6 bg-white shadow-2xl rounded-lg">
+                    <a href="{% url 'event_register' event_id=1 %}">
+                        <img src="https://example.com/tech-paper.jpg" alt="Technical Paper" class="mb-4 w-full h-48 object-cover rounded-md">
+                        <h3 class="text-2xl font-semibold mb-4">Technical Paper Presentation</h3>
+                        <p class="text-gray-600">Present groundbreaking research in mechanical engineering and compete with the best minds.</p>
+                    </a>
+                </div>
+                <!-- Repeat for other events with respective event IDs -->
+                <div class="transform hover:scale-105 transition-transform duration-300 p-6 bg-white shadow-2xl rounded-lg">
+                    <a href="{% url 'event_register' event_id=2 %}">
+                        <img src="https://example.com/cad-contest.jpg" alt="CAD Modeling" class="mb-4 w-full h-48 object-cover rounded-md">
+                        <h3 class="text-2xl font-semibold mb-4">CAD Modeling Contest</h3>
+                        <p class="text-gray-600">Showcase your creativity and design skills in the ultimate CAD showdown.</p>
+                    </a>
+                </div>
+                <!-- Add more events here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 FUELS Symposium, ACCET Mechanical Department. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

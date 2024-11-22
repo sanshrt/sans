@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Slide-up animation keyframes */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Apply the animation */
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+
+        /* Sticky header for the title */
+        .sticky-title {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: linear-gradient(to right, #111827, #374151);
+            padding: 1rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-800 min-h-screen">
+
+    <!-- Title Section with Sticky Positioning -->
+    <div class="sticky-title text-center mb-10">
+        <h1 class="text-4xl font-extrabold text-white">OFFICE BEARERS</h1>
+    </div>
+
+    <!-- Scrollable Container for Cards -->
+    <div class="flex flex-col items-center pt-5 pb-20 space-y-10 overflow-y-auto">
+
+        <!-- Multiple Cards with Slide-Up Animation -->
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+
+        <!-- Repeat the Card Section for Additional Profiles -->
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs w-full bg-blue-100 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <div class="flex justify-center p-6 bg-green-900">
+                <img class="w-28 h-28 rounded-full border-4 border-white shadow-md" src="https://via.placeholder.com/150" alt="Student Photo">
+            </div>
+            <div class="p-3 text-center">
+                <h2 class="text-xl font-semibold text-gray-800">Santhosh Babu S</h2>
+                <p class="text-xs text-gray-500">Website Designer</p>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-teal-600 hover:text-teal-800 font-medium mt-2 block">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+
+        <!-- Add More Cards as Needed -->
+    </div>
+
+</body>
+</html>

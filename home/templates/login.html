@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shackles</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #011a2b, #155e75, #31a4b3); 
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            background-color: #2d3748;
+            color: #cbd5e0;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        /* Ensure the footer stays at the bottom when content is less than the screen height */
+        .content-wrapper {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bg-gray-600 p-10 pb-5 flex items-center justify-between relative">
+            <h1 class="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2">SHACKLES-25</h1>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden relative">
+                <button id="menuButton" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>
+                </button>
+
+                <div id="mobileMenu" class="lg:hidden hidden absolute left-0 mt-2 space-y-2 w-full bg-transparent">
+                    <a href="event" class="text-white hover:underline block">Event</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="text-white hover:underline block">Logout</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="text-white hover:underline block">Login</a>
+                        <a href="{% url 'register' %}" class="text-white hover:underline block">Register</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Large Screen Menu -->
+            <div class="hidden lg:flex justify-between w-full">
+                <div class="flex space-x-4">
+                    <a href="event" class="text-white hover:underline">Event</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="text-white hover:underline">Logout</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="text-white hover:underline">Login</a>
+                        <a href="{% url 'register' %}" class="text-white hover:underline">Register</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page Content -->
+    <div class="content-wrapper flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm transform transition-all duration-300 ease-in-out hover:scale-105">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Login</h2>
+            
+            <form method="POST" class="space-y-4">
+                {% csrf_token %}
+                <div>
+                    <label for="user_name" class="block text-lg text-gray-700">Email:</label>
+                    <input type="email" name="user_name" required class="w-full p-3 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-lg text-gray-700">Password:</label>
+                    <input type="password" name="password" required class="w-full p-3 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Shackles Symposium, ACGCET Mechanical Department. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
